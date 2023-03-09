@@ -1,2 +1,2 @@
 #!/bin/bash
-cacaview -b /path/to/StarWars_IV_ep1.mkv
+telnet towel.blinkenlights.nl
