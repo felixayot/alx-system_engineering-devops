@@ -4,14 +4,11 @@ In these projects offered at ALX, I learnt about System DevOps particularly the 
 More projects are yet to come to fully exhaust all the concepts involved in system DevOps.
 
 - **Shell Basics**
-
 - **Shell permissions**
-
 - **Shell I/O Redirections and filters**
-
 - **Shell, init files, variables and expansions**
-
 - **Command line for the win**
+- **Loops, conditions and parsing**
 
 # Author
 
