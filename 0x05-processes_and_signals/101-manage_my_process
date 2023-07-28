@@ -15,25 +15,31 @@
 #   *Creates a file containing its PID in /var/run/my_process.pid.
 #   *Displays manage_my_process restarted.
 #   *Displays Usage: manage_my_process {start|stop|restart} if any other argument or no argument is passed.
-if [ "$1" == "start" ]
+if [ $# -gt 0 ]
 then
-  ./manage_my_process &
-  echo $$ > /var/run/my_process.pid
-  echo "manage_my_process started"
+    if [ "$1" == "start" ]
+    then
+    ./manage_my_process &
+    echo $$ > /var/run/my_process.pid
+    echo "manage_my_process started"
 
-elif [ "$1" == "stop" ]
-then
-  kill "$(pgrep -f /manage_my_process)" 
-  rm /var/run/my_process.pid
-  echo "manage_my_process stopped"
+    elif [ "$1" == "stop" ]
+    then
+    kill "$(pgrep -f /manage_my_process)" 
+    rm -f /var/run/my_process.pid
+    echo "manage_my_process stopped"
 
-elif [ "$1" == "restart" ]
-then
-  kill "$(pgrep -f /manage_my_process)"
-  rm /var/run/my_process.pid
-  ./manage_my_process &
-  echo $$ > /var/run/my_process.pid
-  echo "manage_my_process restarted"
+    elif [ "$1" == "restart" ]
+    then
+    kill "$(pgrep -f /manage_my_process)"
+    rm -f /var/run/my_process.pid
+    ./manage_my_process &
+    echo $$ > /var/run/my_process.pid
+    echo "manage_my_process restarted"
+
+    else
+      echo "Usage: manage_my_process {start|stop|restart}"
+    fi
 
 else
   echo "Usage: manage_my_process {start|stop|restart}"

@@ -4,7 +4,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 /**
- * infinite_while - Run an infinite while loop.
+ * infinite_while - Runs an infinite while loop.
  * Return: 0 (Success).
  */
 int infinite_while(void)
