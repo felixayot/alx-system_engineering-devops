@@ -9,6 +9,7 @@ More projects are yet to come to fully exhaust all the concepts involved in syst
 - **Shell, init files, variables and expansions**
 - **Command line for the win**
 - **Loops, conditions and parsing**
+- **Processes and signals**
 
 # Author
 
