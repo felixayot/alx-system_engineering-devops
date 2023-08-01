@@ -10,6 +10,7 @@ More projects are yet to come to fully exhaust all the concepts involved in syst
 - **Command line for the win**
 - **Loops, conditions and parsing**
 - **Processes and signals**
+- **Regular expression**
 
 # Author
 
