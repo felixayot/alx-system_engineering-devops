@@ -11,6 +11,8 @@ More projects are yet to come to fully exhaust all the concepts involved in syst
 - **Loops, conditions and parsing**
 - **Processes and signals**
 - **Regular expression**
+- **Networking basics #0**
+- **Networking basics #1**
 
 # Author
 
