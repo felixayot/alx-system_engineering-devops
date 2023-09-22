@@ -14,6 +14,7 @@ More projects are yet to come to fully exhaust all the concepts involved in syst
 - **Networking basics #0**
 - **Networking basics #1**
 - **Web infrastructure design**
+- **Configuration management**
 
 # Author
 
