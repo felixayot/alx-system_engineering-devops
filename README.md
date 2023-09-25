@@ -16,6 +16,7 @@ More projects are yet to come to fully exhaust all the concepts involved in syst
 - **Web infrastructure design**
 - **Configuration management**
 - **SSH**
+- **Web server**
 
 # Author
 
