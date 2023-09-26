@@ -5,7 +5,7 @@ exec { 'get updates':
 
 package { 'nginx':
   ensure  => 'installed',
-  require => Exec['update system'],
+  require => Exec['get updates'],
 }
 
 file {'/etc/nginx/html/index.html':
@@ -21,6 +21,7 @@ exec { 'configure_nginx':
 exec {'redirect_me':
   command  => 'sed -i "24i\	rewrite ^/redirect_me http://google.com/doodles/ permanent;" /etc/nginx/sites-available/default',
   provider => 'shell',
+  require  => [Package['nginx'], Exec['configure_nginx']],
 }
 
 service {'nginx':
