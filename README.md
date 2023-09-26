@@ -1,7 +1,7 @@
 # System Engineering & DevOps - Bash
 
-In these projects offered at ALX, I learnt about System DevOps particularly the UNIX shell basic navigation tools, Bash scripting, Shell permissions and I/O Redirections. The below projects covered all the system DevOps concepts.
-More projects are yet to come to fully exhaust all the concepts involved in system DevOps.
+In these projects offered at ALX, I learnt about System DevOps particularly the UNIX shell basic navigation tools, Bash scripting, Shell permissions and I/O Redirections. The below projects covered all the system DevOps concepts including Configuration Management tool(Puppet), SSH, Web servers and all other concepts involved in system devops.
+Some of the below projects fully exhaust the devops concepts of Web infrastructure and designs. Enjoy!
 
 - **Shell Basics**
 - **Shell permissions**
@@ -17,6 +17,7 @@ More projects are yet to come to fully exhaust all the concepts involved in syst
 - **Configuration management**
 - **SSH**
 - **Web server**
+- **Web stack debugging #0**
 
 # Author
 
