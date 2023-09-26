@@ -7,8 +7,8 @@ apt-get install -y nginx
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
 echo "Hello World!" > /etc/nginx/html/index.html
-touch /etc/nginx/html/404.html
-echo "Ceci n'est pas une page"
+touch /etc/nginx/html/404_page.html
+echo "Ceci n'est pas une page" > /etc/nginx/html/404_page.html
 
 printf %s "server {
     listen 80;
@@ -20,8 +20,8 @@ printf %s "server {
         return 301 http://google.com/doodles/;
     }
 
-    error_page 404 /404.html;
-    location /404 {
+    error_page 404 /404_page.html;
+    location /404_page {
       root /etc/nginx/html;
       internal;
     }
