@@ -5,19 +5,25 @@ exec { 'get updates':
 
 package { 'nginx':
   ensure  => 'installed',
-  require => Exec['update system']
+  require => Exec['update system'],
 }
 
 file {'/etc/nginx/html/index.html':
-  content => 'Hello World!'
+  content => 'Hello World!',
+}
+
+exec { 'configure_nginx':
+  command  => 'echo "server { listen 80; server_name localhost; location / { root /etc/nginx/html; } }"',
+  provider => 'shell',
+  require  => Package['nginx'],
 }
 
 exec {'redirect_me':
   command  => 'sed -i "24i\	rewrite ^/redirect_me http://google.com/doodles/ permanent;" /etc/nginx/sites-available/default',
-  provider => 'shell'
+  provider => 'shell',
 }
 
 service {'nginx':
-  ensure  => running,
-  require => Package['nginx']
+  ensure  => 'running',
+  require => Package['nginx'],
 }
