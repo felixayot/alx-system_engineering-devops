@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Installs and configures HAproxy on my `lb-01` server that respects these conditions:
+#  Sends traffic to `web-01` and `web-02`
+#  Distributes requests using a `roundrobin` algorithm.
+#  Can be managed via an init script.
+#  Configured with the right hostnames: `[STUDENT_ID]-web-01` and `[STUDENT_ID]-web-02`.
+
+apt-get install -y --no-install-recommends software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.8
+apt-get update
+apt-get install -y haproxy=2.8.\*
+
+echo "ENABLED=1" >> /etc/default/haproxy
+mv /etc/haproxy/haproxy.cfg{,.original}
+touch /etc/haproxy/haproxy.cfg
+
+printf %s "global
+    log 127.0.0.1 local0 notice
+    maxconn 2000
+    user haproxy
+    group haproxy
+
+defaults
+    log     global
+    mode    http
+    option  httplog
+    option  dontlognull
+    retries 3
+    option redispatch
+    timeout connect  5000
+    timeout client  10000
+    timeout server  10000
+
+backend server-backend
+    bind 0.0.0.0:80
+    mode http
+    stats enable
+    stats uri /haproxy?stats
+    balance roundrobin
+    option httpclose
+    option forwardfor
+    server 333803-web-01 52.3.252.132:80 check
+    server 333803-web-02 100.26.132.178:80 check
+" >> /etc/haproxy/haproxy.cfg
+
+service haproxy start
