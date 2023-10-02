@@ -18,6 +18,7 @@ Some of the below projects fully exhaust the devops concepts of Web infrastructu
 - **SSH**
 - **Web server**
 - **Web stack debugging #0**
+- **Load balancer**
 
 # Author
 
