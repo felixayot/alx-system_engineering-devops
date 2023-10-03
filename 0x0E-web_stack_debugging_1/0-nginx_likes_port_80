@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configures Nginx to run, and listen on port 80 of all the server’s active IPv4 IPs.
+
+# Remove `default` from `sites-enabled`.
+rm /etc/nginx/sites-enabled/default
+# Add my own file into `sites-available` and a symbolic link at `sites-enabled`.
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# Finally restart nginx to update to new configurations.
+service nginx restart

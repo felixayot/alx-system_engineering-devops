@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Shorter fix to run Nginx, and listen on port 80 of all the server’s active IPv4 IPs.
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
+kill "$(pgrep 'nginx' | head -1)"
