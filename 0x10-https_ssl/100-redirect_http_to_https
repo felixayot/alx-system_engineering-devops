@@ -20,13 +20,13 @@ defaults
 
 frontend www-http
     bind   0.0.0.0:80
-    reqadd X-Forwarded-Proto:\ http
+    http-request add-header X-Forwarded-Proto http
     default_backend www-backend
     redirect scheme https code 301 if !{ ssl_fc }
 
 frontend www-https
     bind   0.0.0.0:443 ssl crt /etc/haproxy/certs/www.flexco.tech.pem
-    reqadd X-Forwarded-Proto:\ https
+    http-request add-header X-Forwarded-Proto https
     acl    letsencrypt-acl path_beg /.well-known/acme-challenge/
     use_backend letsencrypt-backend if letsencrypt-acl
     default_backend www-backend
