@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Fixes the container Ubuntu 14.04 - 287 so as Nginx is running as the nginx
+# user, nginx must:
+# run as nginx user
+# listen on all active IPs on port 8080.
+
+# Edit nginx.conf stream to switch user to nginx
+sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
+# Edit /nginx/sites-available/default stream to listen on port 8080
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+# Change nginx.conf file permissions to u+rw & go+r
+chmod 644 /etc/nginx/nginx.conf
+# Stop Apache web server if it's running
+pkill apache2
+# Start Nginx web server as nginx user
+sudo -u nginx service nginx start
