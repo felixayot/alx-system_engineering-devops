@@ -23,6 +23,7 @@ Some of the below projects fully exhaust the devops concepts of Web infrastructu
 - **HTTPS SSL**
 - **What happens when you type google.com in your browser and press Enter**
 - **Firewall**
+- **Web stack debugging #2**
 
 # Author
 
