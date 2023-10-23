@@ -2,9 +2,9 @@
 """Exports given employee IDs' TODO list progress in CSV format
    using this REST API https://jsonplaceholder.typicode.com/
 """
+import csv
 import requests
 import sys
-import csv
 
 
 if __name__ == "__main__":
