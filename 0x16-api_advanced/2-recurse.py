@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module to query the Reddit API for a list of hot articles."""
 import requests
-import sys
 
 
 def recurse(subreddit, hot_list=[], after=None):
@@ -30,7 +29,3 @@ def recurse(subreddit, hot_list=[], after=None):
         return hot_list
     except Exception:
         return None
-
-
-if __name__ == "__main__":
-    recurse(sys.argv[1])
