@@ -9,7 +9,7 @@ def count_words(subreddit, word_list, occurrences={}, after="", count=0):
     """
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
-        "User-Agent":
+        "User-agent":
         "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) \
         AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 \
         Mobile Safari/537.36"
