@@ -26,6 +26,8 @@ Some of the below projects fully exhaust the devops concepts of Web infrastructu
 - **Web stack debugging #2**
 - **MySQL**
 - **API**
+- **API advanced**
+- **Web stack debugging #3**
 
 # Author
 
