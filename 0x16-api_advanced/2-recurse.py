@@ -23,8 +23,8 @@ def recurse(subreddit, hot_list=[], after=None):
             count = requests.get("https://www.reddit.com/r/{}/hot.json".format
                                  (subreddit),
                                  headers=headers).json().get("data")
-        hot_list += [dic.get("data").get("title")
-                     for dic in count.get("children")]
+        hot_list += [i.get("data").get("title")
+                     for i in count.get("children")]
         if count.get("after"):
             return recurse(subreddit, hot_list, after=count.get("after"))
         return hot_list
