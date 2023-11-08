@@ -28,6 +28,7 @@ Some of the below projects fully exhaust the devops concepts of Web infrastructu
 - **API**
 - **API advanced**
 - **Web stack debugging #3**
+- **Webstack monitoring**
 
 # Author
 
