@@ -5,7 +5,7 @@ curl: 😢😢😢 I'm sorry I don't know what they have done to me. I can't und
 fayot@sysadmin:~$
 ```
 
-The following is the incident report for the Flexco server hosting the AirBnB clone that occurred on October 5, 2023. We understand this service issue has impacted our valued property owners and renters, and we sincerely apologize to everyone who was affected.
+The following is the incident report for the Flexco server hosting the AirBnB clone downtime that occurred on October 5, 2023. We understand this service issue has impacted our valued property owners and renters, and we sincerely apologize to everyone who was affected.
 
 ## Issue Summary
 From 9:05 PM to 10:23 PM East African Time(EAT), requests to flexco.tech resulted in `This site can’t be reached`, `flexco.tech refused to connect`. The issue affected 100% of traffic to the site, since the server was, well, the web server(`NGINX`) hosting the site was down, we took it down. The root cause of this server downtime was an invalid configuration change to renew the Secure Socket Layer certificate for SSL termination in the website.
