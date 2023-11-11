@@ -29,4 +29,4 @@ I had a substantial level of experience working with `haproxy`, so after minutes
 At 10:18 PM EAT, I was done correcting the errors on the HaProxy configuration and restarted it and as expected, it was running and ready to distribute traffic to our servers. Next, I brought up the `nginx` web servers to receive and serve user requests. By 10:23 PM EAT, our systems were fully online again.
 
 ## Corrective and preventative Measures
-Lessons from this world-class embarrassment led us to introduce a comprehensive update to all our packages and a decision to get an alert to update the configuration file to latest directives whenever an automatic package update is initiated and of course, run a simulation test on our UAT environment. This would prevent outages due to automatic update failures.
+Lessons from this world-class embarrassment led us to introduce a comprehensive update to all our packages and a decision to get an alert to update the relevant configuration files to the latest directives whenever an automatic package update is initiated and of course, run a simulation test on our UAT environment. This would prevent outages due to automatic update failures.
