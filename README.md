@@ -30,6 +30,8 @@ Some of the below projects fully exhaust the devops concepts of Web infrastructu
 - **Web stack debugging #3**
 - **Webstack monitoring**
 - **Postmortem**
+- **Application server**
+- **Web stack debugging #4**
 
 # Author
 
