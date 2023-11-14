@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Reloads Gunicorn in a graceful way.
+
+# (1)Find all processes, (2)look for gunicorn processes,
+# (3)select and print their PIDs,
+# (4)then send 'hang up' signals to those processes
+# in order to reload gunicorn gracefully.
+ps aux | grep gunicorn | awk '{ print $2 }' | xargs kill -HUP
