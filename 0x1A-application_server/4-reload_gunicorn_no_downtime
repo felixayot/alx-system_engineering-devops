@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Reloads Gunicorn in a graceful way.
+# shellcheck disable=SC2009
 
 # (1)Find all processes, (2)look for gunicorn processes,
 # (3)select and print their PIDs,
