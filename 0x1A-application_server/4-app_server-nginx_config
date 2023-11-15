@@ -14,7 +14,7 @@ server {
     }
 
     location /api {
-        proxy_pass http://0.0.0.0:5002/api/;
+        proxy_pass http://0.0.0.0:5002/api;
     }
 
     error_page 404 /404_page.html;
