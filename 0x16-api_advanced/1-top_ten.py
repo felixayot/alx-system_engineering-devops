@@ -15,11 +15,11 @@ def top_ten(subreddit):
         Mobile Safari/537.36"
     }
     params = {
-        "limit": 10
+        "limit": 9
     }
     resp = requests.get(url, headers=headers, params=params,
                         allow_redirects=False)
-    if resp.status_code == 404:
+    if resp.status_code != 200:
         print("None")
         return
     results = resp.json().get("data")
