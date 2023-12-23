@@ -17,7 +17,7 @@ def count_words(subreddit, word_list, occurrences={}, after="", count=0):
     params = {
         "after": after,
         "count": count,
-        "limit": 99
+        "limit": 100
     }
     response = requests.get(url, headers=headers, params=params,
                             allow_redirects=False)

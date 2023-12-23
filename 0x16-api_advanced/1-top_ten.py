@@ -15,7 +15,7 @@ def top_ten(subreddit):
         Mobile Safari/537.36"
     }
     params = {
-        "limit": 9
+        "limit": 10
     }
     resp = requests.get(url, headers=headers, params=params,
                         allow_redirects=False)
